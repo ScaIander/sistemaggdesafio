@@ -13,7 +13,7 @@ session_start();
 	<meta charset="utf-8">
 	<title>Faltas</title>
 	<script src="js/jquery-3.3.1.js"></script>
-	<script src="js/falta.js"></script>
+	<script src="js/faltatable.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/falta.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
@@ -21,6 +21,11 @@ session_start();
 <?php include 'navbar.html'; ?>
 <center>
 	<br>
+
+	<input type="button" class="btn btn-warning" onclick="voltar()" value="Voltar">
+    <br>
+    <br>
+
 	<table>
 	<tr>
 		<td><a href="formfalta.php?modo=cadastrar"><img src="assets/cadastrarbutton.png">Cadastrar</a></td>

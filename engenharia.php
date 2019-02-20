@@ -13,7 +13,7 @@
 	<meta charset="utf-8">
 	<title>Engenharias</title>
 	<script src="js/jquery-3.3.1.js"></script>
-	<script src="js/engenharia.js"></script>
+	<script src="js/engenhariatable.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/engenharia.css">
 </head>
@@ -21,6 +21,11 @@
 <?php include 'navbar.html'; ?>
 <center>
 	<br>
+
+	<input type="button" class="btn btn-warning" onclick="voltar()" value="Voltar">
+    <br>
+    <br>
+
 	<table>
 	<tr>
 		<td><a href="formengenharia.php?modo=cadastrar"><img src="assets/cadastrarbutton.png">Cadastrar</a></td>

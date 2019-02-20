@@ -19,13 +19,18 @@ error_reporting(0);
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/associado.css">
 	<script src="js/jquery-3.3.1.js"></script>
-	<script src="js/associado.js"></script>
+	<script src="js/associadotable.js"></script>
 </head>
 <body>
 <?php include 'navbar.html'; ?>
 <?php gerarFiltro(['Engenharia','Setor']); ?>
 <center>
 <br>
+
+<input type="button" class="btn btn-warning" onclick="voltar()" value="Voltar">
+    <br>
+    <br>
+
 <table>
 <tr>
 	<td><a href="formassociado.php?modo=cadastrar"><img src="assets/cadastrarbutton.png">Cadastrar</a></td>

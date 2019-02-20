@@ -13,11 +13,13 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
 	<script src="js/jquery-3.3.1.js"></script>
+	
 </head>
 <body>
 	<?php include 'navbar.html'; ?>
 	<center>
 	<h3>Clique em um setor na barra de navegação para abrir o seu menu</h3>	
 	</center>
+
 </body>
 </html>

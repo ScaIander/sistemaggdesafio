@@ -14,7 +14,7 @@
 	<meta charset="utf-8">
 	<title>Motivo Falta</title>
 	<script src="js/jquery-3.3.1.js"></script>
-	<script src="js/motivofalta.js"></script>
+	<script src="js/motivofaltatable.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/motivofalta.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
@@ -22,6 +22,11 @@
 <?php include 'navbar.html'; ?>
 <center>
 	<br>
+
+	<input type="button" class="btn btn-warning" onclick="voltar()" value="Voltar">
+    <br>
+    <br>
+
 	<table>
 	<tr>
 		<td><a href="formmotivofalta.php?modo=cadastrar"><img src="assets/cadastrarbutton.png">Cadastrar</a></td>

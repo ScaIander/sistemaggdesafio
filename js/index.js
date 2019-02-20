@@ -12,6 +12,7 @@ function loginaction(){
 			} else {
 				var label = document.getElementById("response");
 				label.innerHTML = "Usuário ou Senha Inválidos";
+				
 			}
 		},
 		error: function(){
