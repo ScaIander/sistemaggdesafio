@@ -1,8 +1,8 @@
 <?php
 	session_start();
-	if(!isset($_SESSION['id'])){
-		header("Location: logout.php");
-	}
+	 if(!isset($_SESSION['id'])){
+	 	header("Location: logout.php");
+	 }
 ?>
 <!DOCTYPE html>
 <html>

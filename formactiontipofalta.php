@@ -19,20 +19,27 @@ if($modo == "cadastrar"){
 
      if($nome=="" AND $peso==""){
 
-        header("Location: formtipofalta.php?id=$id&modo=edit&errorresponse2=Campo em Branco, por favor preencher");
+        header("Location: formtipofalta.php?id=$id&modo=cadastrar&errorresponse2=Campo em Branco, por favor preencher");
     
         } else if ($peso==""){
             
-            header("Location: formtipofalta.php?id=$id&modo=edit&errorresponse1=Campo em Branco, por favor preencher");
+            header("Location: formtipofalta.php?id=$id&modo=cadastrar&errorresponse1=Campo em Branco, por favor preencher");
             
         }
         else if($nome==""){
     
-            header("Location: formtipofalta.php?id=$id&modo=edit&errorresponse=Campo em Branco, por favor preencher");
+            header("Location: formtipofalta.php?id=$id&modo=cadastrar&errorresponse=Campo em Branco, por favor preencher");
         }
     else{
 
-    $inserirdados = "INSERT INTO tipofalta(nome,peso) VALUES ('$nome','$peso') ";
+        $sql = $conn->query("SELECT nome FROM tipofalta WHERE nome='$nome'");
+
+        if(mysqli_num_rows($sql) > 0){
+
+            header("Location: formtipofalta.php?id=$id&modo=cadastrar&errorresponse= Esta bandeira já existe, pro favor tente novamente");
+       
+        } else {
+     $inserirdados = "INSERT INTO tipofalta(nome,peso) VALUES ('$nome','$peso') ";
 
     $result = $conn->query($inserirdados);
     
@@ -40,10 +47,14 @@ if($modo == "cadastrar"){
         header("Location: formtipofalta.php?modo=cadastrar&response=Cadastrado com sucesso!");
     } else {
         echo ($inserirdados);
-        die("Infelizmente não foi possível cadastrar a falta");
-    }
-}
-}
+        die("Infelizmente não foi possível cadastrar a bandeira");
+           }
+              }
+       }
+                        }
+
+
+
 else if($modo == "edit"){
     $id = $_GET['id'];
     
