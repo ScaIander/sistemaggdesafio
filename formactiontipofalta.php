@@ -17,6 +17,21 @@ if($modo == "cadastrar"){
      $nome = str_replace("\'","",$_GET['nome']);
      $peso = str_replace("\'","",$_GET['peso']);
 
+     if($nome=="" AND $peso==""){
+
+        header("Location: formtipofalta.php?id=$id&modo=edit&errorresponse2=Campo em Branco, por favor preencher");
+    
+        } else if ($peso==""){
+            
+            header("Location: formtipofalta.php?id=$id&modo=edit&errorresponse1=Campo em Branco, por favor preencher");
+            
+        }
+        else if($nome==""){
+    
+            header("Location: formtipofalta.php?id=$id&modo=edit&errorresponse=Campo em Branco, por favor preencher");
+        }
+    else{
+
     $inserirdados = "INSERT INTO tipofalta(nome,peso) VALUES ('$nome','$peso') ";
 
     $result = $conn->query($inserirdados);
@@ -27,6 +42,7 @@ if($modo == "cadastrar"){
         echo ($inserirdados);
         die("Infelizmente não foi possível cadastrar a falta");
     }
+}
 }
 else if($modo == "edit"){
     $id = $_GET['id'];
