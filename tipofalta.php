@@ -41,7 +41,7 @@
 			<th></th>
 		</thead>
 		<?php 
-			$sql = "SELECT id ,nome , peso FROM tipofalta";
+			$sql = "SELECT id ,nome , peso FROM tipofalta ORDER BY peso ";
 			$result = $conn->query($sql);
 			while($row = $result->fetch_assoc()){
 				echo "<tr>";
